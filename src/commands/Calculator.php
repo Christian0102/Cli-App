@@ -29,11 +29,6 @@ class Calculator extends BaseCommand
         echo 'Result is: ' . $this->calculate($operation) . PHP_EOL;
     }
 
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
     protected function calculate(string $operation)
     {
         $firstValue = 0;
