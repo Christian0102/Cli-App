@@ -8,7 +8,7 @@ use ErrorException;
 
 class Calculator extends BaseCommand
 {
-    protected string $description = 'Command Line Simple Calculator:';
+    protected string $description = 'CLI Simple Calculator:';
 
     protected string $name = 'Calculator';
 

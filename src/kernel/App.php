@@ -46,7 +46,7 @@ class App
         }
     }
 
-    private function registry($classes): void
+    private function registry(array $classes): void
     {
         foreach ($classes as $class) {
             if (!class_exists($class)) {
