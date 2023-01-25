@@ -9,12 +9,14 @@ class App
 {
     protected array $instances;
 
+    protected string $defaultPath = '/config/provider.php';
+
     public function __construct()
     {
-        if (!file_exists(ROOT . '/config/provider.php')) {
-            new ErrorException('File is not found  /config/provider.php');
+        if (!file_exists(ROOT . $this->defaultPath)) {
+            new ErrorException('File is not found '. $this->defaultPath);
         }
-        $classes = require_once(ROOT . '/config/provider.php');
+        $classes = require_once(ROOT . $this->defaultPath);
 
         foreach ($classes as $class) {
             if (!class_exists($class)) {
